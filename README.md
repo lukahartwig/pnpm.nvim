@@ -21,6 +21,14 @@ Using [packer](https://github.com/wbthomason/packer.nvim)
 use 'lukahartwig/pnpm.nvim'
 ```
 
+### Setup
+
+This is technically optional but makes tab completion work right away.
+
+```lua
+require('telescope').load_extension('pnpm')
+```
+
 ## Usage
 
 ```
