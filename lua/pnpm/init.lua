@@ -23,7 +23,6 @@ local M = {}
 
 M.list_workspace_packages = function()
   local paths = pnpm_list()
-  print(vim.inspect(paths))
   if paths == nil then return end
   local workspace_packages = {}
   for i, path in ipairs(paths) do
