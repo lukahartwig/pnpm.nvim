@@ -18,7 +18,12 @@ neovim plugin that make working with pnpm monorepos easier.
 Using [packer](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-use 'lukahartwig/pnpm.nvim'
+use {
+  'lukahartwig/pnpm.nvim',
+  requires = {
+    { 'nvim-telescope/telescope.nvim' }
+  }
+}
 ```
 
 ### Setup
