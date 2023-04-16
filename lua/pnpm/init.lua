@@ -15,7 +15,7 @@ local function read_package_info(path)
   local package_meta = vim.fn.json_decode(package_json)
   return {
     name = package_meta.name,
-    path = package_json_path,
+    path = path,
   }
 end
 
