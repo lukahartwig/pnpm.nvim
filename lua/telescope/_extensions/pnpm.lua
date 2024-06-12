@@ -1,8 +1,5 @@
 local pnpm = require('pnpm');
 local telescope = require('telescope')
-local actions = require("telescope.actions")
-local action_state = require("telescope.actions.state")
-local builtin = require("telescope.builtin")
 local pickers = require('telescope.pickers')
 local finders = require('telescope.finders')
 local conf = require("telescope.config").values
@@ -23,16 +20,6 @@ local function workspace_package_picker(opts)
       end
     },
     sorter = conf.generic_sorter(opts),
-    attach_mappings = function(prompt_bufnr)
-      actions.select_default:replace(function()
-        local entry = action_state.get_selected_entry().value
-        actions.close(prompt_bufnr, true)
-        vim.schedule(function()
-          builtin.find_files({ cwd = entry.path })
-        end)
-      end)
-      return true
-    end,
   }):find()
 end
 
