@@ -27,7 +27,6 @@ local function workspace_package_picker(opts)
       actions.select_default:replace(function()
         local entry = action_state.get_selected_entry().value
         actions.close(prompt_bufnr, true)
-        vim.fn.execute('cd ' .. entry.path, "silent")
         vim.schedule(function()
           builtin.find_files({ cwd = entry.path })
         end)
