@@ -1,6 +1,6 @@
 # pnpm.nvim
 
-neovim plugin that make working with pnpm monorepos easier.
+neovim plugin that makes working with pnpm monorepos easier.
 
 ## Features
 
